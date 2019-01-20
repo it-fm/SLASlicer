@@ -30,7 +30,6 @@ class STLGeometry
 public:
 	vector<STLFacet>	facets;
 
-public:
 	STLGeometry() :
 		facets()
 	{}
