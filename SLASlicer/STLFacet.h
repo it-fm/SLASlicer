@@ -34,8 +34,8 @@ private:
 		return pt;
 	}
 
-	fp_t		BBMinValue(unsigned int index) { return std::min(std::min(vertices[0][index], vertices[1][index]), vertices[2][index]); };
-	fp_t		BBMaxValue(unsigned int index) { return std::max(std::max(vertices[0][index], vertices[1][index]), vertices[2][index]); };
+	fp_t		BBMinValue(unsigned int index) { return (std::min)((std::min)(vertices[0][index], vertices[1][index]), vertices[2][index]); };
+	fp_t		BBMaxValue(unsigned int index) { return (std::max)((std::max)(vertices[0][index], vertices[1][index]), vertices[2][index]); };
 
 	void		CalcBBox()
 	{
@@ -116,7 +116,7 @@ public:
 	//	}
 	//	return c;
 	//}
-	const bool InsideYZ(fp_t yCoordinate, fp_t zCoordinate, fp_t &xIntersection)
+	bool InsideYZ(fp_t yCoordinate, fp_t zCoordinate, fp_t &xIntersection)
 	{
 		bool inside = false;
 		int i, j;
